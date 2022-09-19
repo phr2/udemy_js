@@ -1,4 +1,6 @@
 
+
+//agrego este comentario
 const todos = JSON.parse (localStorage.getItem('todos')) || []; //creamos un array vacío en donde guardar la info que ingrese el usuario, al poner localStorage.getItems estamos queriendo buscar los todos en el localstorage pero si no los encuentra va a utilizar un arreglo vacío si no los encuentra, pero ojo que son string, entonces para transformarlo en Arreglo usamos JSON.parse
 const render = () => {
     const todoList = document.getElementById('todo-list');
