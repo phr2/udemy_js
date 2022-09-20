@@ -32,8 +32,9 @@ const actualizaTodos = (todos) => {
     const todoStrings = JSON.stringify(todos) //lo transformamos en string y lo guardamos en una constante
     localStorage.setItem('todos', todoStrings) //reemplazamos todos los todos
 } //funcion creada para actualizar los Todos
+
 window.onload = () => {
-    render()
+    render() //una vez que abra, tratará de renderizar todos los elementos dentro de nuestros todos
     const form = document.getElementById('todo-form'); /*tomamos nuestro formulario, obtenemos la referencia de nuestro form y lo guardamos una referencia del formulario en const form*/
     form.onsubmit = (e) => { //reemplazamos la funcion que este tenia en onsubmit
         e.preventDefault();  //para prevenir que se refresque la página
@@ -48,3 +49,4 @@ window.onload = () => {
               }
     
 }
+//ahora por mas que actualizemos la página los datos siguen estando
